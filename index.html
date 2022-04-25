@@ -13,6 +13,7 @@
 	</style>
 </head>
 <body>
+	
 	<div class="container">
 		<div class="row">
 			<h1 class="col-12 text-center mt-5">JS Calculator</h1>
@@ -51,7 +52,7 @@
 				</div> <!-- .row -->
 			</div> <!-- #calculator -->
 		</div> <!-- .row -->
-	</div> <!-- .container -->
+	</div> 
 
 	<script>
         	/*
@@ -84,6 +85,10 @@
 			else if (operator === "/") {
 				return num1/num2;
 			}
+			else if (operator === "&radic") {
+				return Math.pow(num1, 1/2);
+			}
+		
 			else {
 				return 'error';
 			}
