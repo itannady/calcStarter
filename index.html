@@ -70,6 +70,29 @@
 		    */
 
 
+		//Function that takes three parameters
+		function calculator(num1, operator, num2) {
+			if (operator === "+") {
+				return num1 + num2;
+			}
+			else if (operator === "-") {
+				return num1-num2;
+			}
+			else if (operator === "*") {
+				return num1*num2;
+			}
+			else if (operator === "/") {
+				return num1/num2;
+			}
+			else {
+				return 'error';
+			}
+
+		}
+
+		console.log(calculator(1, "+", 2)); 
+
+
 
 	</script>
 </body>
