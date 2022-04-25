@@ -1,101 +1,72 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>JS Calculator</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-
-	<style>
-		#display {
-			font-size: 2em;
-		}
-	</style>
+	<meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- Bootstrap -->
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous"> -->
+	 <!-- CSS stylesheet -->
+	 <link rel="stylesheet" href="css/styles.css" />
+	 <!-- Javascript -->
+	 <script defer src="./js/script.js"></script>
+	 <title>Calculator</title>
+	
 </head>
 <body>
+	<section class="bg">
+		<div class="container">
+		  <div class="outline">
+			<div id="display">
+			  <p id="text-output">12345</p>
+			</div>
+		  </div>
+		  <div class="wrapper">
+			<div class="solar">
+			  <div class="solar-lines"></div>
+			  <div class="solar-lines"></div>
+			  <div class="solar-lines"></div>
+			  <div class="solar-lines"></div>
+			</div>
+			<h1>IT-WAD</h1>
+			<div class="line"></div>
+		  </div>
+		  <div class="buttons">
+			<div class="grid-1">
+			  <button class="btn1 btn-font">+/-</button>
+			  <button class="btn1 btn-font">&radic;</button>
+			  <button class="btn1 btn-font">%</button>
+			  <button class="btn1 btn-font">MRC</button>
+			  <button class="btn1 btn-font">M-</button>
+			  <button class="btn1 btn-font">M+</button>
+			  <button class="btn2 btn-font">7</button>
+			  <button class="btn2 btn-font">8</button>
+			  <button class="btn2 btn-font">9</button>
+			  <button class="btn2 btn-font">4</button>
+			  <button class="btn2 btn-font">5</button>
+			  <button class="btn2 btn-font">6</button>
+			  <button class="btn2 btn-font">1</button>
+			  <button class="btn2 btn-font">2</button>
+			  <button class="btn2 btn-font">3</button>
+			  <button class="btn1 btn-font">ON/C</button>
+			  <button class="btn2 btn-font">0</button>
+			  <button class="btn2 btn-font">.</button>
+			</div>
+			<div class="grid-2">
+			  <button class="btn1 btn-font">&divide;</button>
+			  <button class="btn1 btn-font">&times;</button>
+			  <button class="btn1 btn-font">-</button>
+			  <button class="btn1 btn-font">+</button>
+			  <button class="btn1 btn-font btn-size">=</button>
+			</div>
+		  </div>
+		</div>
+	  </section>
+</body>
 	
-	<div class="container">
-		<div class="row">
-			<h1 class="col-12 text-center mt-5">JS Calculator</h1>
-		</div> <!-- .row -->
-		<div class="row">
-			<div id="calculator" class="mt-4 col-12 col-md-6 ml-md-auto mr-md-auto col-lg-4">
-				<div class="row">
-					<input type="text" id="display" class="col-12 text-right form-control" value="0">
-				</div> <!-- .row -->
-				<div class="row">
-					<button class="col-9 btn btn-lg btn-outline-dark" id="ac">AC</button> <!-- 0 -->
-					<button class="col-3 btn btn-lg btn-outline-dark" id="divide">/</button> <!-- 1 -->
-				</div> <!-- .row -->
-				<div class="row">
-					<button class="col-3 btn btn-lg btn-outline-dark">7</button> <!-- 2 -->
-					<button class="col-3 btn btn-lg btn-outline-dark">8</button> <!-- 3 -->
-					<button class="col-3 btn btn-lg btn-outline-dark">9</button> <!-- 4 -->
-					<button class="col-3 btn btn-lg btn-outline-dark" id="multiply">x</button> <!-- 5 -->
-				</div> <!-- .row -->
-				<div class="row">
-					<button class="col-3 btn btn-lg btn-outline-dark">4</button> <!-- 6 -->
-					<button class="col-3 btn btn-lg btn-outline-dark">5</button> <!-- 7 -->
-					<button class="col-3 btn btn-lg btn-outline-dark">6</button> <!-- 8 -->
-					<button class="col-3 btn btn-lg btn-outline-dark" id="subtract">-</button> <!-- 9 -->
-				</div> <!-- .row -->
-				<div class="row">
-					<button class="col-3 btn btn-lg btn-outline-dark">1</button> <!-- 10 -->
-					<button class="col-3 btn btn-lg btn-outline-dark">2</button> <!-- 11 -->
-					<button class="col-3 btn btn-lg btn-outline-dark">3</button> <!-- 12 -->
-					<button class="col-3 btn btn-lg btn-outline-dark" id="add">+</button> <!-- 13 -->
-				</div> <!-- .row -->
-				<div class="row">
-					<button class="col-6 btn btn-lg btn-outline-dark">0</button> <!-- 14 -->
-					<button class="col-3 btn btn-lg btn-outline-dark" id="decimal">.</button> <!-- 15 -->
-					<button class="col-3 btn btn-lg btn-outline-dark" id="equal">=</button> <!-- 16 -->
-				</div> <!-- .row -->
-			</div> <!-- #calculator -->
-		</div> <!-- .row -->
-	</div> 
 
 	<script>
-        	/*
-			1. User enters the first number (could be multi-digit)
-				a. String concatenation
-			2. User presses an operation (addition, subtraction, multiplication, or division)
-			3. User enters the second number (could be multi-digit)
-			4. User presses = button to see the result
-			5. User presses AC button to clear the display (show 0)
-		    */
-
-		    /*
-			1. Make 'display' variable
-			2. Save 'display' into 'num1' 
-			3. Clear 'display' variable
-		    */
-
-
-		//Function that takes three parameters
-		function calculator(num1, operator, num2) {
-			if (operator === "+") {
-				return num1 + num2;
-			}
-			else if (operator === "-") {
-				return num1-num2;
-			}
-			else if (operator === "*") {
-				return num1*num2;
-			}
-			else if (operator === "/") {
-				return num1/num2;
-			}
-			else if (operator === "&radic") {
-				return Math.pow(num1, 1/2);
-			}
-		
-			else {
-				return 'error';
-			}
-
-		}
-
-		console.log(calculator(1, "+", 2)); 
+        	
 
 
 
