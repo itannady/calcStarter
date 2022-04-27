@@ -18,7 +18,7 @@
 		<div class="container">
 		  <div class="outline">
 			<div id="display">
-			  <p id="text-output">12345</p>
+			  <p id="text-output"></p>
 			</div>
 		  </div>
 		  <div class="wrapper">
@@ -33,43 +33,36 @@
 		  </div>
 		  <div class="buttons">
 			<div class="grid-1">
-			  <button class="btn1 btn-font">+/-</button>
-			  <button class="btn1 btn-font">&radic;</button>
-			  <button class="btn1 btn-font">%</button>
-			  <button class="btn1 btn-font">MRC</button>
-			  <button class="btn1 btn-font">M-</button>
-			  <button class="btn1 btn-font">M+</button>
-			  <button class="btn2 btn-font">7</button>
-			  <button class="btn2 btn-font">8</button>
-			  <button class="btn2 btn-font">9</button>
-			  <button class="btn2 btn-font">4</button>
-			  <button class="btn2 btn-font">5</button>
-			  <button class="btn2 btn-font">6</button>
-			  <button class="btn2 btn-font">1</button>
-			  <button class="btn2 btn-font">2</button>
-			  <button class="btn2 btn-font">3</button>
-			  <button class="btn1 btn-font">ON/C</button>
-			  <button class="btn2 btn-font">0</button>
-			  <button class="btn2 btn-font">.</button>
+			  <button class="btn btn1 btn-font" value="" onclick="">+/-</button>
+			  <button class="btn btn1 btn-font" value="" onclick="display('√')">&radic;</button>
+			  <button class="btn btn1 btn-font" value="%" onclick="display('%')">%</button>
+			  <button class="btn btn1 btn-font" value="" onclick="">MRC</button>
+			  <button class="btn btn1 btn-font" value="" onclick="">M-</button>
+			  <button class="btn btn1 btn-font" value="" onclick="">M+</button>
+			  <button class="btn btn2 btn-font" value="7" onclick="display('7')">7</button>
+			  <button class="btn btn2 btn-font" value="8" onclick="display('8')">8</button>
+			  <button class="btn btn2 btn-font" value="9" onclick="display('9')">9</button>
+			  <button class="btn btn2 btn-font" value="4" onclick="display('4')">4</button>
+			  <button class="btn btn2 btn-font" value="5" onclick="display('5')">5</button>
+			  <button class="btn btn2 btn-font" value="6" onclick="display('6')">6</button>
+			  <button class="btn btn2 btn-font" value="1" onclick="display('1')">1</button>
+			  <button class="btn btn2 btn-font" value="2" onclick="display('2')">2</button>
+			  <button class="btn btn2 btn-font" value="3" onclick="display('3')">3</button>
+			  <button id="clear" class="btn1 btn-font" value="">ON/C</button>
+			  <button class="btn btn2 btn-font" value="0" onclick="display('0')">0</button>
+			  <button class="btn btn2 btn-font" value="." onclick="display('.')">.</button>
 			</div>
 			<div class="grid-2">
-			  <button class="btn1 btn-font">&divide;</button>
-			  <button class="btn1 btn-font">&times;</button>
-			  <button class="btn1 btn-font">-</button>
-			  <button class="btn1 btn-font">+</button>
-			  <button class="btn1 btn-font btn-size">=</button>
+			  <button class="btn btn1 btn-font" value="/" onclick="display('/')">&divide;</button>
+			  <button class="btn btn1 btn-font" value="*" onclick="display('*')">&times;</button>
+			  <button class="btn btn1 btn-font" value="-" onclick="display('-')">-</button>
+			  <button class="btn btn1 btn-font" value="+" onclick="display('+')">+</button>
+			  <button class="equal btn1 btn-font btn-size" value="=" onclick="equal()">=</button>
 			</div>
 		  </div>
 		</div>
 	  </section>
 </body>
 	
-
-	<script>
-        	
-
-
-
-	</script>
 </body>
 </html>
