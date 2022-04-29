@@ -26,41 +26,33 @@ function display(x) {
 function calculate() {
   let screen = [];
 
-
-  if(output.innerHTML.includes("+")) {
+  if (output.innerHTML.includes("+")) {
     screen = output.innerHTML.split("+");
     return Number(screen[0]) + Number(screen[1]);
-    
   }
-  if(output.innerHTML.includes("-")) {
+  if (output.innerHTML.includes("-")) {
     screen = output.innerHTML.split("-");
     return Number(screen[0]) - Number(screen[1]);
-    
   }
-  if(output.innerHTML.includes("*")) {
+  if (output.innerHTML.includes("*")) {
     screen = output.innerHTML.split("*");
     return Number(screen[0]) * Number(screen[1]);
- 
   }
-  if(output.innerHTML.includes("/")) {
+  if (output.innerHTML.includes("/")) {
     screen = output.innerHTML.split("/");
     return Number(screen[0]) / Number(screen[1]);
- 
   }
-  if(output.innerHTML.includes("√")) {
+  if (output.innerHTML.includes("√")) {
     screen = output.innerHTML.split("√");
     return Math.sqrt(Number(screen[0]));
- 
   }
-
 }
 
-console.log(screen)
+console.log(screen);
 
 function equal() {
-let x = calculate();
-output.innerHTML = x;
-
+  let x = calculate();
+  output.innerHTML = x;
 }
 
 //Clear function
@@ -68,12 +60,8 @@ clear.addEventListener("click", () => {
   output.innerHTML = "";
 });
 
-
-
-
 // //Calculator display
 // let display = [];
-
 
 // // // //Clear function
 // clear.addEventListener("click", () => {
@@ -93,7 +81,6 @@ clear.addEventListener("click", () => {
 
 //   });
 // });
-
 
 //Function that takes three parameters
 // function calculator(num1, operator, num2) {
