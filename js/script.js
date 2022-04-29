@@ -48,8 +48,8 @@ function calculate() {
  
   }
   if(output.innerHTML.includes("√")) {
-    // screen = output.innerHTML.split("√");
-    return Math.pow(Number(screen[0]), 1 / 2);
+    screen = output.innerHTML.split("√");
+    return Math.sqrt(Number(screen[0]));
  
   }
 
