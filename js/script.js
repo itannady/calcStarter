@@ -44,7 +44,7 @@ function calculate() {
   }
   if(output.innerHTML.includes("/")) {
     screen = output.innerHTML.split("/");
-    return Number(screen[0]) * Number(screen[1]);
+    return Number(screen[0]) / Number(screen[1]);
  
   }
   if(output.innerHTML.includes("√")) {
