@@ -15,8 +15,6 @@
 
 //Select elements
 const output = document.querySelector("#text-output");
-// let buttons = document.querySelectorAll(".btn");
-// let operator = document.querySelectorAll('.btn1');
 let clear = document.getElementById("clear");
 
 function display(x) {
@@ -48,8 +46,6 @@ function calculate() {
   }
 }
 
-console.log(screen);
-
 function equal() {
   let x = calculate();
   output.innerHTML = x;
@@ -59,6 +55,11 @@ function equal() {
 clear.addEventListener("click", () => {
   output.innerHTML = "";
 });
+
+
+
+// let buttons = document.querySelectorAll(".btn");
+// let operator = document.querySelectorAll('.btn1');
 
 // //Calculator display
 // let display = [];
